@@ -21,18 +21,15 @@ const address = {
     city: 'Vilnius',
     street: 'Sausion',
     house: '78',
-    apart: '12'
-}
+    apart: '12',
 
-const inventation = address1 => {
-    if(address1) {
-        return <div>Welcome to {address1.city}</div>
-    }
-    return <h1>See you next time</h1>
 }
 
 
 
-const addressBlog = <div> Hello {inventation(address)}</div>
+const addressBlog = <div>
+    {address.city ? <div>Welcome your city: {address.city}</div> : <div>Provide your address</div>}
+    {address.city && <div>Welcome your street: {address.street}</div>}
+</div>
 
 createRoot(document.getElementById('root')).render(addressBlog)
