@@ -16,6 +16,7 @@ const formatAddress = (address) => {
 
 
 
+
 const address = {
     city: 'Vilnius',
     street: 'Sausion',
@@ -23,10 +24,15 @@ const address = {
     apart: '12'
 }
 
+const inventation = address1 => {
+    if(address1) {
+        return <div>Welcome to {address1.city}</div>
+    }
+    return <h1>See you next time</h1>
+}
 
 
 
-
-const addressBlog = <>User address: {formatAddress(address)}</>
+const addressBlog = <div> Hello {inventation(address)}</div>
 
 createRoot(document.getElementById('root')).render(addressBlog)
