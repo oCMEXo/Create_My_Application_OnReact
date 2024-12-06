@@ -5,18 +5,6 @@ import React from "react";
 import App from './App.jsx'
 
 
-const element =  <div>Hello World!
-<p>pop</p>
-</div>
-
-
-const formatAddress = (address) => {
-    return address.city + ', ' + address.street + address.house
-}
-
-
-
-
 const address = {
     city: 'Vilnius',
     street: 'Sausion',
